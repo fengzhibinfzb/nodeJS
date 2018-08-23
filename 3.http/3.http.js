@@ -21,7 +21,7 @@ function serve(request,response){
             response.write(data); //-> 写响应头
             response.end();//-> 关闭响应
         });
-    }else if(pathname =='/clock'){
+    }else if(pathname =='/clock'){ //通过cmd命令窗口，输入curl http://localhost:3000/clock 即可开启
         var counter = 0;
         var init = setInterval(function(){
             response.write(new Date().toString());
